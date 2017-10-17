@@ -16,17 +16,14 @@
     <!-- use Google icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <!-- Compiled and minified CSS -->
-    <!-- 以后需换成本地加载 加快速度 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
     <!-- link navbar's css -->
     <link rel="stylesheet" href="css/home.css" type="text/css">
 </head>
 <body >
-    <!-- Import jQuery & materialize.js (order!)-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- 以后需换成本地加载 加快速度 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     <!-- link home.js-->
     <script src="js/home.js"></script>
