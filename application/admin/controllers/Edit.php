@@ -74,7 +74,7 @@ class Edit extends CI_Controller
          */
         $this->Articles_Model->update($article_data);
 
-        redirect('home/view');
+        redirect('article/view');
     }
 }
 ?>
