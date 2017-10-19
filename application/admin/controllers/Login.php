@@ -41,12 +41,6 @@ class Login extends CI_Controller
             // 输入不符合规则 重新显示页面
             redirect('login/view');
 
-            /*
-            $this->load->view('components/header', $data);
-            $this->load->view('login');
-            $this->load->view('components/footer');
-             */
-
         } else
         {
             $data['email'] = $this->input->post('email');
@@ -69,12 +63,6 @@ class Login extends CI_Controller
                 
                 // 重新显示页面
                 redirect('login/view');
-
-                /*
-                $this->load->view('components/header', $data);
-                $this->load->view('login');
-                $this->load->view('components/footer');
-                 */
             }
         }
     }

@@ -89,6 +89,8 @@ class Article extends CI_Controller
          * @param $article_data
          */
         $this->Articles_Model->insert($article_data);
+
+        redirect('article/view');
     }
 
     /*
@@ -124,6 +126,8 @@ class Article extends CI_Controller
     public function delete($article_id)
     {
         $this->Articles_Model->delete($article_id);
+
+        redirect('article/view');
     }
 }
 ?>

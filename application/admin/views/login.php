@@ -1,4 +1,6 @@
-<div class="container row">
+<script type="text/javascript" src="js/login.js"></script>
+
+<div class="container row" style="margin-top: 180px;">
     <?php echo validation_errors(); ?>
 
     <!-- form action undefined -->
@@ -18,7 +20,7 @@
         </div>
 
         <div class="right-align">
-            <button class="btn waves-effect waves-light" type="submit">Login
+            <button id="submit-btn" class="btn waves-effect waves-light" type="submit">Login
                 <i class="material-icons right">send</i>
             </button>
         </div>

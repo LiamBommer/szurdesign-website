@@ -63,6 +63,8 @@ class Announ extends CI_Controller
          * @param $announ_data
          */
         $this->Announ_Model->insert($announ_data);
+
+        redirect('announ/view');
     }
 
     /*
@@ -97,6 +99,8 @@ class Announ extends CI_Controller
     public function delete($announ_id)
     {
         $this->Announ_Model->delete($announ_id);
+
+        redirect('announ/view');
     }
 }
 
