@@ -35,11 +35,22 @@ class Login extends CI_Controller
          */
         $this->form_validation->set_rules('email', 'email_area', 'required');
         $this->form_validation->set_rules('password', 'pw_area', 'required');
-        
+
+        // ajax返回数组
+        $ajax_result = array();
+
         if($this->form_validation->run() == FALSE)
         {
-            // 输入不符合规则 重新显示页面
-            redirect('login/view');
+            // 输入不符合规则 
+            
+            // 重新显示页面
+            // redirect('login/view');
+
+            // 填充返回数组
+            $ajax_result['result'] =  'failed';
+            $ajax_result['error'] = validation_errors();
+            echo json_encode($ajax_result);
+            exit;
 
         } else
         {
@@ -56,13 +67,25 @@ class Login extends CI_Controller
                 $this->session->user_email = $this->input->post('email');
 
                 // show index
-                redirect('article/view/articles');
+                // redirect('article/view/articles');
+
+                // 填充返回数组
+                $ajax_result['result'] =  'succeeded';
+                echo json_encode($ajax_result);
+                exit;
+
             } else 
             {   
                 /* 密码错误 */
                 
                 // 重新显示页面
-                redirect('login/view');
+                // redirect('login/view');
+
+                // 填充返回数组
+                $ajax_result['result'] =  'failed';
+                $ajax_result['error'] = '密码错误';
+                echo json_encode($ajax_result);
+                exit;
             }
         }
     }

@@ -3,8 +3,8 @@
 
 ### 路径修改
 
-* admin中base_url()需修改为公网ip及对应根目录
-* home中删除base_url()即可
+* 将 config/config.php 中 base_url() 改为： http://szurdesign.com/
+* 修改 .htaccess 文件，修正路径
 
 ### 安全性改动
 
